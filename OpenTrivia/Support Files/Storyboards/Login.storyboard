@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="omv-6z-kjh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="m2o-q9-r7A">
+            <objects>
+                <viewController id="omv-6z-kjh" customClass="LoginViewController" customModule="OpenTrivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w6S-GO-fqd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trivia_logo" translatesAutoresizingMaskIntoConstraints="NO" id="b90-DN-eN6">
+                                <rect key="frame" x="77.5" y="44" width="220" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="ISH-ud-Z1z"/>
+                                    <constraint firstAttribute="width" constant="220" id="qFS-HJ-Ljx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Open Trivia App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kr-hX-W73">
+                                <rect key="frame" x="24" y="176" width="327" height="43"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="36"/>
+                                <color key="textColor" red="0.90196078430000004" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Select a username to continue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZx-rg-40Y">
+                                <rect key="frame" x="24" y="227" width="327" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.90196078430000004" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="k9D-UD-QVo">
+                                <rect key="frame" x="24" y="271" width="327" height="61"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yj-64-z5R">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.90196078430000004" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qdb-1b-Axg">
+                                        <rect key="frame" x="0.0" y="20" width="327" height="40"/>
+                                        <color key="tintColor" red="0.90196078430000004" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="n7v-iQ-hC9"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.90196078430000004" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T3w-t1-qe1">
+                                        <rect key="frame" x="0.0" y="60" width="327" height="1"/>
+                                        <color key="backgroundColor" red="0.90196078430000004" green="0.90980392160000001" blue="0.90980392160000001" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="hwH-6A-3h7"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFV-fN-5Ky">
+                                <rect key="frame" x="24" y="356" width="327" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="GMG-pO-ZCX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" red="0.90196078430000004" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueButtonPressed:" destination="omv-6z-kjh" eventType="touchUpInside" id="z6p-C5-D27"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23529411759999999" green="0.25098039220000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="vOr-IJ-l9B" firstAttribute="trailing" secondItem="k9D-UD-QVo" secondAttribute="trailing" constant="24" id="0yE-2C-Xgv"/>
+                            <constraint firstItem="b90-DN-eN6" firstAttribute="top" secondItem="vOr-IJ-l9B" secondAttribute="top" constant="24" id="6Wq-6n-kHj"/>
+                            <constraint firstItem="6kr-hX-W73" firstAttribute="centerX" secondItem="b90-DN-eN6" secondAttribute="centerX" id="7Ao-fJ-vHU"/>
+                            <constraint firstItem="HFV-fN-5Ky" firstAttribute="leading" secondItem="vOr-IJ-l9B" secondAttribute="leading" constant="24" id="ELK-qK-2ef"/>
+                            <constraint firstItem="b90-DN-eN6" firstAttribute="centerX" secondItem="w6S-GO-fqd" secondAttribute="centerX" id="EYX-rJ-vXu"/>
+                            <constraint firstItem="vOr-IJ-l9B" firstAttribute="trailing" secondItem="FZx-rg-40Y" secondAttribute="trailing" constant="24" id="FW2-eN-1LR"/>
+                            <constraint firstItem="vOr-IJ-l9B" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="HFV-fN-5Ky" secondAttribute="bottom" constant="24" id="MnV-re-wXg"/>
+                            <constraint firstItem="FZx-rg-40Y" firstAttribute="centerX" secondItem="6kr-hX-W73" secondAttribute="centerX" id="OyU-RI-D3z"/>
+                            <constraint firstItem="6kr-hX-W73" firstAttribute="top" secondItem="b90-DN-eN6" secondAttribute="bottom" constant="12" id="Oys-XL-4KV"/>
+                            <constraint firstItem="FZx-rg-40Y" firstAttribute="top" secondItem="6kr-hX-W73" secondAttribute="bottom" constant="8" id="U5l-TZ-Idd"/>
+                            <constraint firstItem="vOr-IJ-l9B" firstAttribute="trailing" secondItem="HFV-fN-5Ky" secondAttribute="trailing" constant="24" id="V3d-XN-bvT"/>
+                            <constraint firstItem="HFV-fN-5Ky" firstAttribute="top" secondItem="k9D-UD-QVo" secondAttribute="bottom" constant="24" id="bSw-iN-SmJ"/>
+                            <constraint firstItem="vOr-IJ-l9B" firstAttribute="trailing" secondItem="6kr-hX-W73" secondAttribute="trailing" constant="24" id="e5b-te-FWQ"/>
+                            <constraint firstItem="k9D-UD-QVo" firstAttribute="top" secondItem="FZx-rg-40Y" secondAttribute="bottom" constant="24" id="gec-4D-PHm"/>
+                            <constraint firstItem="FZx-rg-40Y" firstAttribute="leading" secondItem="vOr-IJ-l9B" secondAttribute="leading" constant="24" id="sdD-9d-Qoj"/>
+                            <constraint firstItem="k9D-UD-QVo" firstAttribute="leading" secondItem="vOr-IJ-l9B" secondAttribute="leading" constant="24" id="y6l-LC-9DD"/>
+                            <constraint firstItem="6kr-hX-W73" firstAttribute="leading" secondItem="vOr-IJ-l9B" secondAttribute="leading" constant="24" id="zJQ-DW-NdS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vOr-IJ-l9B"/>
+                    </view>
+                    <connections>
+                        <outlet property="mainImageView" destination="b90-DN-eN6" id="uqE-vf-DHM"/>
+                        <outlet property="subtitleLabel" destination="FZx-rg-40Y" id="Q1K-nK-AZO"/>
+                        <outlet property="titleLabel" destination="6kr-hX-W73" id="b2i-gQ-0Jr"/>
+                        <outlet property="usernameTextField" destination="Qdb-1b-Axg" id="x1i-np-D13"/>
+                        <outlet property="usernameTitleLabel" destination="1yj-64-z5R" id="khF-uj-nuy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J50-uO-COO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-69" y="-265"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="trivia_logo" width="267" height="195"/>
+    </resources>
+</document>

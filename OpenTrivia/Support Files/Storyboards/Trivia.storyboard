@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vAz-uo-Gka">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Trivia Categories View Controller-->
+        <scene sceneID="b7X-mI-azY">
+            <objects>
+                <viewController id="Rnh-5T-Uue" customClass="TriviaCategoriesViewController" customModule="OpenTrivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Fu-Bh-rfC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sA4-lC-5x8">
+                                <rect key="frame" x="24" y="136" width="225.5" height="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6MN-hI-Vi5">
+                                <rect key="frame" x="0.0" y="186" width="375" height="432"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="L4S-tb-yql">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TriviaCategoryCollectionViewCell" id="AeY-xY-8kk">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Trivia" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="G3X-3M-DVA">
+                                <rect key="frame" x="24" y="88" width="225" height="43"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="Sed-pD-KoJ">
+                                <rect key="frame" x="261" y="88" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="WQz-PZ-dmE"/>
+                                    <constraint firstAttribute="width" constant="90" id="cDv-K4-JHD"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sA4-lC-5x8" firstAttribute="leading" secondItem="G3X-3M-DVA" secondAttribute="leading" id="3ji-p8-Xmu"/>
+                            <constraint firstItem="6MN-hI-Vi5" firstAttribute="top" relation="greaterThanOrEqual" secondItem="sA4-lC-5x8" secondAttribute="bottom" constant="8" id="3p7-mT-Smw"/>
+                            <constraint firstItem="vME-bk-ckv" firstAttribute="bottom" secondItem="6MN-hI-Vi5" secondAttribute="bottom" id="4QD-69-PiQ"/>
+                            <constraint firstItem="sA4-lC-5x8" firstAttribute="trailing" secondItem="G3X-3M-DVA" secondAttribute="trailing" id="5LX-CM-X5N"/>
+                            <constraint firstItem="6MN-hI-Vi5" firstAttribute="top" secondItem="Sed-pD-KoJ" secondAttribute="bottom" constant="8" id="FfB-PV-0Cc"/>
+                            <constraint firstItem="G3X-3M-DVA" firstAttribute="leading" secondItem="vME-bk-ckv" secondAttribute="leading" constant="24" id="JW3-gB-sp8"/>
+                            <constraint firstItem="Sed-pD-KoJ" firstAttribute="top" secondItem="vME-bk-ckv" secondAttribute="top" constant="24" id="Jx4-LD-IWf"/>
+                            <constraint firstItem="sA4-lC-5x8" firstAttribute="top" secondItem="G3X-3M-DVA" secondAttribute="bottom" constant="5" id="Ktp-pa-PqS"/>
+                            <constraint firstItem="G3X-3M-DVA" firstAttribute="top" secondItem="vME-bk-ckv" secondAttribute="top" constant="24" id="UAS-L7-ESg"/>
+                            <constraint firstItem="vME-bk-ckv" firstAttribute="trailing" secondItem="6MN-hI-Vi5" secondAttribute="trailing" id="WIf-hM-Dl5"/>
+                            <constraint firstItem="6MN-hI-Vi5" firstAttribute="leading" secondItem="vME-bk-ckv" secondAttribute="leading" id="mlb-wT-gVm"/>
+                            <constraint firstItem="vME-bk-ckv" firstAttribute="trailing" secondItem="Sed-pD-KoJ" secondAttribute="trailing" constant="24" id="uns-5o-ZYz"/>
+                            <constraint firstItem="Sed-pD-KoJ" firstAttribute="leading" secondItem="G3X-3M-DVA" secondAttribute="trailing" constant="12" id="wfz-nH-q5n"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vME-bk-ckv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9b7-sG-dpK">
+                        <barButtonItem key="backBarButtonItem" title=" " id="owZ-Yg-rHE"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="subtitleLabel" destination="sA4-lC-5x8" id="f1s-Zq-VU5"/>
+                        <outlet property="titleLabel" destination="G3X-3M-DVA" id="nUd-KE-rsk"/>
+                        <outlet property="triviaCategoriesCollectionView" destination="6MN-hI-Vi5" id="Go1-SV-UMI"/>
+                        <outlet property="userImageView" destination="Sed-pD-KoJ" id="bxL-0q-m3g"/>
+                        <segue destination="1yC-ve-xjr" kind="show" identifier="toTriviaCategory" id="h4T-tv-m0U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8kQ-wS-c5T" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1393" y="-334"/>
+        </scene>
+        <!--Category-->
+        <scene sceneID="DQ8-xB-QEN">
+            <objects>
+                <viewController title="Category" id="1yC-ve-xjr" customClass="TriviaCategoryDetailViewController" customModule="OpenTrivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oic-cd-bwK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AwD-Cq-a5N">
+                                <rect key="frame" x="24" y="88" width="327" height="43"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category subtitle" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CV6-W4-C9L">
+                                <rect key="frame" x="24" y="139" width="327" height="16.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ezm-zS-8Pg">
+                                <rect key="frame" x="24" y="179.5" width="112.5" height="112.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ezm-zS-8Pg" secondAttribute="height" multiplier="1:1" id="Zaw-N4-NOZ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbp-Y5-Pxm" customClass="FlatButton" customModule="OpenTrivia" customModuleProvider="target">
+                                <rect key="frame" x="148.5" y="179.5" width="202.5" height="40"/>
+                                <color key="backgroundColor" red="0.17254901959999999" green="0.64313725489999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="kPS-dU-dt8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="1yC-ve-xjr" eventType="touchUpInside" id="K8e-aS-GbE"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Bkb-dr-6DH">
+                                <rect key="frame" x="0.0" y="64" width="375" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="N8v-bg-x6d"/>
+                                </constraints>
+                            </progressView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRF-lH-wLr">
+                                <rect key="frame" x="24" y="316" width="327" height="202.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Bkb-dr-6DH" firstAttribute="top" secondItem="cR5-Jg-5ye" secondAttribute="top" id="31Q-ZN-6qy"/>
+                            <constraint firstItem="AwD-Cq-a5N" firstAttribute="leading" secondItem="cR5-Jg-5ye" secondAttribute="leading" constant="24" id="C1c-3L-WYF"/>
+                            <constraint firstItem="Pbp-Y5-Pxm" firstAttribute="top" secondItem="ezm-zS-8Pg" secondAttribute="top" id="JW8-kN-Nfu"/>
+                            <constraint firstItem="ezm-zS-8Pg" firstAttribute="leading" secondItem="cR5-Jg-5ye" secondAttribute="leading" constant="24" id="JtT-mu-6yw"/>
+                            <constraint firstItem="cR5-Jg-5ye" firstAttribute="trailing" secondItem="AwD-Cq-a5N" secondAttribute="trailing" constant="24" id="Phb-PW-W2f"/>
+                            <constraint firstItem="CV6-W4-C9L" firstAttribute="trailing" secondItem="AwD-Cq-a5N" secondAttribute="trailing" id="QQn-US-FMU"/>
+                            <constraint firstItem="CV6-W4-C9L" firstAttribute="top" secondItem="AwD-Cq-a5N" secondAttribute="bottom" constant="8" id="R1H-0Y-NhZ"/>
+                            <constraint firstItem="eRF-lH-wLr" firstAttribute="top" secondItem="ezm-zS-8Pg" secondAttribute="bottom" constant="24" id="ToA-s1-hvN"/>
+                            <constraint firstItem="Bkb-dr-6DH" firstAttribute="leading" secondItem="oic-cd-bwK" secondAttribute="leading" id="c3j-h5-TSr"/>
+                            <constraint firstItem="cR5-Jg-5ye" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eRF-lH-wLr" secondAttribute="bottom" priority="999" constant="24" id="dFM-ug-5Mw"/>
+                            <constraint firstItem="cR5-Jg-5ye" firstAttribute="trailing" secondItem="Pbp-Y5-Pxm" secondAttribute="trailing" constant="24" id="ehH-la-W4h"/>
+                            <constraint firstItem="eRF-lH-wLr" firstAttribute="leading" secondItem="cR5-Jg-5ye" secondAttribute="leading" constant="24" id="f8J-bF-PzX"/>
+                            <constraint firstItem="ezm-zS-8Pg" firstAttribute="top" secondItem="CV6-W4-C9L" secondAttribute="bottom" constant="24" id="qXc-m4-fMU"/>
+                            <constraint firstAttribute="trailing" secondItem="Bkb-dr-6DH" secondAttribute="trailing" id="qqJ-27-Fl2"/>
+                            <constraint firstItem="Pbp-Y5-Pxm" firstAttribute="leading" secondItem="ezm-zS-8Pg" secondAttribute="trailing" constant="12" id="qrG-dA-oIo"/>
+                            <constraint firstItem="cR5-Jg-5ye" firstAttribute="trailing" secondItem="eRF-lH-wLr" secondAttribute="trailing" constant="24" id="umv-xA-s04"/>
+                            <constraint firstItem="CV6-W4-C9L" firstAttribute="leading" secondItem="AwD-Cq-a5N" secondAttribute="leading" id="wPI-K7-lQd"/>
+                            <constraint firstItem="ezm-zS-8Pg" firstAttribute="width" secondItem="oic-cd-bwK" secondAttribute="width" multiplier="0.3" id="zN5-0Y-bAL"/>
+                            <constraint firstItem="AwD-Cq-a5N" firstAttribute="top" secondItem="cR5-Jg-5ye" secondAttribute="top" constant="24" id="zli-8h-HIE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cR5-Jg-5ye"/>
+                    </view>
+                    <connections>
+                        <outlet property="playButton" destination="Pbp-Y5-Pxm" id="3IZ-mW-hGU"/>
+                        <outlet property="progressView" destination="Bkb-dr-6DH" id="l3l-SQ-k4B"/>
+                        <outlet property="subtitleLabel" destination="CV6-W4-C9L" id="lEv-q0-gt4"/>
+                        <outlet property="titleLabel" destination="AwD-Cq-a5N" id="uhk-bW-dGx"/>
+                        <outlet property="triviaCategoryImageView" destination="ezm-zS-8Pg" id="vkA-IZ-txC"/>
+                        <outlet property="triviaInstructionsTextView" destination="eRF-lH-wLr" id="hdk-gU-5dd"/>
+                        <segue destination="mSh-RQ-2qY" kind="presentation" identifier="toTriviaGame" id="Zts-Q2-PPq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e2x-aN-MNN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2233" y="-334"/>
+        </scene>
+        <!--Trivia-->
+        <scene sceneID="FBM-ST-79q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vAz-uo-Gka" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Trivia" image="trivia" id="zKH-9b-Mqh"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qys-6v-Zys">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Rnh-5T-Uue" kind="relationship" relationship="rootViewController" id="ly5-9Q-Tcz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xs6-ZZ-YWk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="-333"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NEJ-0B-mpc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mSh-RQ-2qY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vdi-n2-EfY">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Khs-cf-Sfm" kind="relationship" relationship="rootViewController" id="oMC-72-uWg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vtn-Gc-8ph" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3100" y="-335"/>
+        </scene>
+        <!--Trivia Game View Controller-->
+        <scene sceneID="mB1-8I-ma6">
+            <objects>
+                <viewController id="Khs-cf-Sfm" customClass="TriviaGameViewController" customModule="OpenTrivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2mj-QK-y6A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tMf-sx-jbI">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="N6p-Zc-pIV">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TriviaQuestionCollectionViewCell" id="Vya-4a-kMg">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJt-iG-i9w">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="vYI-e8-jHo"/>
+                                    <barButtonItem title="Next" style="done" id="zpf-1n-jah">
+                                        <color key="tintColor" red="0.90196078430000004" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="nextButtonPressed:" destination="Khs-cf-Sfm" id="njM-Vb-AO8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="0.23529411759999999" green="0.25098039220000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23529411759999999" green="0.25098039220000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="tMf-sx-jbI" firstAttribute="leading" secondItem="z4L-gR-Bj6" secondAttribute="leading" id="1cK-Sj-KW9"/>
+                            <constraint firstItem="WJt-iG-i9w" firstAttribute="top" secondItem="tMf-sx-jbI" secondAttribute="bottom" id="5oH-et-rvJ"/>
+                            <constraint firstItem="tMf-sx-jbI" firstAttribute="trailing" secondItem="z4L-gR-Bj6" secondAttribute="trailing" id="8ku-H2-KSg"/>
+                            <constraint firstItem="WJt-iG-i9w" firstAttribute="bottom" secondItem="z4L-gR-Bj6" secondAttribute="bottom" id="Bez-iS-r5z"/>
+                            <constraint firstItem="WJt-iG-i9w" firstAttribute="trailing" secondItem="z4L-gR-Bj6" secondAttribute="trailing" id="Df2-06-dBZ"/>
+                            <constraint firstItem="tMf-sx-jbI" firstAttribute="top" secondItem="z4L-gR-Bj6" secondAttribute="top" id="E39-su-r88"/>
+                            <constraint firstItem="WJt-iG-i9w" firstAttribute="leading" secondItem="z4L-gR-Bj6" secondAttribute="leading" id="hNh-6o-ZRV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="z4L-gR-Bj6"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dWt-Fm-KUK">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="kKb-1t-o0E">
+                            <color key="tintColor" red="0.90196078430000004" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="Khs-cf-Sfm" id="RgG-Li-FuJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="tMf-sx-jbI" id="MrS-QP-8eB"/>
+                        <outlet property="nextBarButtonItem" destination="zpf-1n-jah" id="b7P-sV-tRk"/>
+                        <outlet property="toolbar" destination="WJt-iG-i9w" id="RnY-Oq-mj9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KAv-kD-1SN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3974" y="-335"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="trivia" width="20" height="20"/>
+        <image name="user" width="300" height="300"/>
+    </resources>
+</document>
