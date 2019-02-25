@@ -1,0 +1,25 @@
+PODS:
+  - Kingfisher (4.8.1)
+  - Siesta (1.4.0):
+    - Siesta/Core (= 1.4.0)
+  - Siesta/Core (1.4.0)
+  - Siesta/UI (1.4.0):
+    - Siesta/Core
+
+DEPENDENCIES:
+  - Kingfisher
+  - Siesta
+  - Siesta/UI
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Kingfisher
+    - Siesta
+
+SPEC CHECKSUMS:
+  Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
+  Siesta: feae635134e33336ff6a7048c43b993a3f7ce1b9
+
+PODFILE CHECKSUM: 4bf366493ed49be2d52a137be13c6ae3091d7116
+
+COCOAPODS: 1.5.0
